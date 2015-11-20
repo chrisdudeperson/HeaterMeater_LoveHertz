@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Heater Meater</string>
+    <string name="title_activity_new_cook">NewCook</string>
+
+    <string-array name="meat_names">NewCook
+    <item>Beef</item>
+        <item>Chicken</item>
+        <item>Pork</item>
+        <item>Lamb</item>
+    </string-array>
+
+    <string-array name="weight">NewCook
+        <item>100g</item>
+        <item>200g</item>
+        <item>300g</item>
+        <item>400g</item>
+    </string-array>
+
+    <string-array name="how_cooked">NewCook
+        <item>Well Done</item>
+        <item>Medium</item>
+        <item>Medium Rare</item>
+        <item>Rare</item>
+    </string-array>
+</resources>
