@@ -24,11 +24,13 @@
         </activity>
         <activity android:name=".PreviousCooks" >
         </activity>
-        <activity android:name=".Results" >
-        </activity>
         <activity android:name=".TimeScreen" >
         </activity>
         <activity android:name=".GraphScreen" >
+        </activity>
+        <activity android:name=".Results2" >
+        </activity>
+        <activity android:name=".NewCook1" >
         </activity>
     </application>
 

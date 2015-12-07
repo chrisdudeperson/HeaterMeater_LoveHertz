@@ -129,6 +129,7 @@
         android:id="@+id/spinner2"
         android:layout_above="@+id/textView7"
         android:layout_toEndOf="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
         android:layout_below="@+id/spinner"
         android:layout_alignLeft="@+id/spinner"
         android:layout_alignStart="@+id/spinner"
@@ -141,6 +142,7 @@
         android:id="@+id/spinner3"
         android:layout_alignBottom="@+id/textView7"
         android:layout_toEndOf="@+id/textView7"
+        android:layout_toRightOf="@+id/textView7"
         android:layout_below="@+id/spinner2"
         android:layout_alignLeft="@+id/spinner2"
         android:layout_alignStart="@+id/spinner2"
@@ -158,5 +160,48 @@
         android:textSize="50dp"
         android:textStyle="bold"
         android:textColor="#fe0303" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:editable="true"
+        android:id="@+id/tttext"
+        android:layout_above="@+id/textView9"
+        android:layout_alignRight="@+id/spinner3"
+        android:layout_alignEnd="@+id/spinner3"
+        android:layout_alignTop="@+id/textView8"
+        android:layout_toRightOf="@+id/startButton"
+        android:layout_toEndOf="@+id/startButton"
+        android:textColor="#f81818"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:editable="true"
+        android:id="@+id/finishtimetext"
+        android:layout_above="@+id/textView10"
+        android:layout_toEndOf="@+id/startButton"
+        android:layout_below="@+id/tttext"
+        android:layout_toRightOf="@+id/startButton"
+        android:textColor="#f81818"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:editable="true"
+        android:id="@+id/oventemptext"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/startButton"
+        android:layout_alignLeft="@+id/finishtimetext"
+        android:layout_alignStart="@+id/finishtimetext"
+        android:textColor="#f81818"
+        android:textSize="20dp"/>
 
 </RelativeLayout>
