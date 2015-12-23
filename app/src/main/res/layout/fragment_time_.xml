@@ -4,11 +4,49 @@
     android:layout_height="match_parent"
     android:background="#ff0000">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Temperature"
+        android:id="@+id/textView12"
+        android:layout_marginTop="41dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_time_fragment"
-        android:id="@+id/textView13" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Time left (mins)"
+        android:id="@+id/textView15"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="172dp"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:editable="true"
+        android:id="@+id/temperature"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:textSize="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:editable="true"
+        android:id="@+id/time"
+        android:layout_alignTop="@+id/textView15"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp"
+        android:textSize="25dp" />
 
 </RelativeLayout>

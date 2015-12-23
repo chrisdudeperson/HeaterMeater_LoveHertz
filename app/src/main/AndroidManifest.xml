@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/meaterlogo1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
@@ -31,6 +31,12 @@
         <activity android:name=".Results2" >
         </activity>
         <activity android:name=".NewCook1" >
+        </activity>
+        <activity android:name=".RoastRecipe" >
+        </activity>
+        <activity android:name=".ChickenRecipe" >
+        </activity>
+        <activity android:name=".BeefRecipe" >
         </activity>
     </application>
 
