@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,7 @@ public class Time_Frag extends Fragment {
 
         JSONObject obj;
         server = new Server();
+        //server.connectWebSocket();
         int targetTime=0, targetTemp=0;
 
         //while(true)
@@ -31,13 +33,15 @@ public class Time_Frag extends Fragment {
                 targetTime = obj.getInt("ETA");
                 targetTemp = obj.getInt("RequiredTemp");
 
+                Log.i("Target Time:", Integer.toString(targetTemp));
+
                 TextView temperature = (TextView) view.findViewById(R.id.temperature);
                 temperature.setText(Integer.toString(targetTemp));
 
                 TextView time = (TextView) view.findViewById(R.id.time);
                 time.setText(Integer.toString(targetTime));
 
-                Thread.sleep(1000);
+                //Thread.sleep(1000);
             }
             catch (Exception e){}
         //}

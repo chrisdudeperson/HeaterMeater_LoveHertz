@@ -24,8 +24,8 @@ public class NewCook extends AppCompatActivity {
 
     int temp;
     int meat;
-    int FT; //finish time
-    int RT; //required temperature
+    int FT=65; //finish time
+    int RT=70; //required temperature
 
     private Server server;
 
@@ -34,10 +34,10 @@ public class NewCook extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_cook);
 
+        // Create server class
         server = new Server();
-        server.connectWebSocket();
 
-
+        //START BUTTON------------------------------------------------------
         Button startButton = (Button) findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +45,7 @@ public class NewCook extends AppCompatActivity {
                 startActivity(new Intent(NewCook.this, Results2.class));
             }
         });
+        //_________________________________________________________________
 
         ArrayAdapter<CharSequence> stringArrayAdapter =
                 ArrayAdapter.createFromResource(this,
@@ -266,6 +267,10 @@ public class NewCook extends AppCompatActivity {
         //spinner.setOnItemSelectedListener(onSpinner1);
         //spinner.setOnItemSelectedListener(onSpinner2);
 
-        server.serverSend(FT, RT);
+
+        // Start up connection with server and send cooking info ----------------
+        server.connectWebSocket(FT, RT);
+        //server.serverSend(FT, RT);
+        //-----------------------------------------------------------------------
     }
 }

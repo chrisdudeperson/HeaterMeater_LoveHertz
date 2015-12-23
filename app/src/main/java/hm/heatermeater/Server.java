@@ -16,7 +16,8 @@ public class Server extends Activity {
 
     private WebSocketClient mWebSocketClient;
 
-    public void connectWebSocket() {
+    //Start up connection with server
+    public void connectWebSocket(final int targetTime, final int targetTemperature) {
         URI uri;
         try {
             uri = new URI("ws://54.218.32.43:8001");
@@ -34,8 +35,8 @@ public class Server extends Activity {
                     JSONObject jsonObj = new JSONObject();
                     jsonObj.put("Request", "start"); // Set the first name/pair
                     jsonObj.put("Serial", "TEST123");
-                    jsonObj.put("ETA", "90");
-                    jsonObj.put("RequiredTemp", "80");
+                    jsonObj.put("ETA", Integer.toString(targetTime));
+                    jsonObj.put("RequiredTemp", Integer.toString(targetTemperature));
                     Log.i("test", jsonObj.toString());
                     mWebSocketClient.send(jsonObj.toString());
                 } catch (Exception e) {}
@@ -75,7 +76,7 @@ public class Server extends Activity {
         mWebSocketClient.connect();
     }
 
-
+    //Request JSON object from server
     public JSONObject serverRequest(View view) {
         JSONObject err = new JSONObject();
         try {
@@ -91,14 +92,15 @@ public class Server extends Activity {
         return err;
     }
 
+    //Send cooking information to the server
     public void serverSend(int targetTime, int targetTemperature)
     {
         try {
             JSONObject jsonObj = new JSONObject();
             jsonObj.put("Request", "start");
             jsonObj.put("Serial", "TEST123");
-            jsonObj.put("ETA", targetTime);
-            jsonObj.put("RequiredTemp", targetTemperature);
+            jsonObj.put("ETA", Integer.toString(targetTime));
+            jsonObj.put("RequiredTemp", Integer.toString(targetTemperature));
             mWebSocketClient.send(jsonObj.toString());
         }
         catch (Exception e){}
