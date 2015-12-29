@@ -24,22 +24,23 @@ public class Time_Frag extends Fragment {
         JSONObject obj;
         server = new Server();
         //server.connectWebSocket();
-        int targetTime=0, targetTemp=0;
+        String targetTime;
+        String targetTemp;
 
         //while(true)
         //{
             try{
                 obj = server.serverRequest(view);
-                targetTime = obj.getInt("ETA");
-                targetTemp = obj.getInt("RequiredTemp");
+                targetTime = obj.getString("ETA");
+                targetTemp = obj.getString("RequiredTemp");
 
-                Log.i("Target Time:", Integer.toString(targetTemp));
+                Log.i("Target Time:", targetTemp);
 
                 TextView temperature = (TextView) view.findViewById(R.id.temperature);
-                temperature.setText(Integer.toString(targetTemp));
+                temperature.setText(targetTemp);
 
                 TextView time = (TextView) view.findViewById(R.id.time);
-                time.setText(Integer.toString(targetTime));
+                time.setText(targetTime);
 
                 //Thread.sleep(1000);
             }

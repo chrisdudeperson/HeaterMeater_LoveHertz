@@ -24,8 +24,8 @@ public class NewCook extends AppCompatActivity {
 
     int temp;
     int meat;
-    int FT=65; //finish time
-    int RT=70; //required temperature
+    String FT = "65"; //finish time
+    String RT = "70"; //required temperature
 
     private Server server;
 
@@ -75,30 +75,30 @@ public class NewCook extends AppCompatActivity {
                         if (position == 0) {//beef
                             meat = 0;
                             targetTemp.setText("70 °C");
-                            RT = 70;
+                            RT = "70";
                             finishTime.setText("65 min");
-                            FT = 65;
+                            FT = "65";
                             ovenTemp.setText("180 °C");
                         } else if (position == 1) {//chicken
                             meat = 1;
                             targetTemp.setText("70 °C");
-                            RT = 70;
+                            RT = "70";
                             finishTime.setText("60 min");
-                            FT = 60;
+                            FT = "60";
                             ovenTemp.setText("190 °C");
                         } else if (position == 2) {//pork
                             meat = 2;
                             targetTemp.setText("70 °C");
-                            RT = 70;
+                            RT = "70";
                             finishTime.setText("77 min");
-                            FT = 77;
+                            FT = "77";
                             ovenTemp.setText("180 °C");
                         } else if (position == 3) {//lamb
                             meat = 3;
                             targetTemp.setText("70 °C");
-                            RT = 70;
+                            RT = "70";
                             finishTime.setText("55 min");
-                            FT = 55;
+                            FT = "55";
                             ovenTemp.setText("180 °C");
                         } else
                             targetTemp.setText("err");
